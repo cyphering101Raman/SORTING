@@ -24,6 +24,7 @@ int main()
     {
         printf("%d  ", array[j]);
     }
+    printf("\n");
 
     for(int pass = 0; pass<=n-1; pass++)
     {
