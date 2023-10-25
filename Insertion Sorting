@@ -1,0 +1,44 @@
+#include<stdio.h>
+
+int main()
+{
+    int n = 6;
+    int array[6] = {7,11,9,2,17,4};
+
+    printf("Entered Array: ");
+    for(int k = 0; k<n; k++)
+    {
+        printf("%d   ", array[k]);
+    }
+    printf("\n\n");
+
+    for(int i = 1; i<n; i++)
+    {
+        int key = array[i];
+
+        int j = i-1;
+
+        while(j>=0 && key<array[j])
+        {
+            array[j+1] = array[j];
+            j--;
+
+            printf("Updated Array: ");
+            for(int k = 0; k<n; k++)
+            {
+                printf("%d   ", array[k]);
+            }
+            printf("\n");
+        }
+
+        array[j+1] = key;
+    }
+
+    printf("Newly Updated Array: ");
+    for(int k = 0; k<n; k++)
+    {
+        printf("%d   ", array[k]);
+    }
+    printf("\n");
+
+}
