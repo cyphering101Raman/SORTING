@@ -9,15 +9,21 @@ void swap(int *p, int *q)
 
 int main()
 {
-    int n = 6;
-    int array[6] = {7,11,9,2,17,4};
+    int n = printf("Enter N: ");
+    scanf("%d", &n);
 
-    printf("Entered Array: ");
-    for(int k = 0; k<n; k++)
+    int array[n];
+    printf("Enter the elements: ");
+    for(int i = 0; i<n; i++)
     {
-        printf("%d   ", array[k]);
+        scanf("%d", &array[i]);
     }
-    printf("\n\n");
+
+    printf("\nEntered Array: ");
+    for(int j = 0; j<n; j++)
+    {
+        printf("%d  ", array[j]);
+    }
 
     for(int pass = 0; pass<=n-1; pass++)
     {
